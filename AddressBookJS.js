@@ -212,4 +212,28 @@ class AddressBook {
         });
         console.log(AddressBookArray);
     }
+
+    //UC12 Sort by City alphabetically
+    {
+        AddressBookArray.sort(function (a, b) {
+            return ('' + a.city).localeCompare(b.city);
+        });
+        console.log(AddressBookArray);
+    }
+
+    //UC12 Sort by State alphabetically
+    {
+        AddressBookArray.sort(function (a, b) {
+            return ('' + a.state).localeCompare(b.state);
+        });
+        console.log(AddressBookArray);
+    }
+
+    //UC12 Sort by Zip numerically descending
+    {
+        AddressBookArray.sort(function (a, b) {
+            return ('' + b.zip).localeCompare(a.zip);
+        });
+        console.log(AddressBookArray);
+    }
 }    
