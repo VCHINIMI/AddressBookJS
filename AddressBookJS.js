@@ -162,4 +162,25 @@ class AddressBook {
     {
         console.log('Number of Contacts in Address Book are : ' + AddressBookArray.reduce((acc, val) => acc + 1,0) );
     }
+    
+    //UC7 Ensure No Duplicate entries 
+    {
+        let newContact = new AddressBook('Vinayc', 'Chinimilli', 'Drno', 'Visakhapatnam', 'AndhraPradesh', 533003, 9987654321, 'vc@gmail.com') ;
+        if  (       AddressBookArray.filter(contact =>  
+                    contact.firstName == newContact.firstName && 
+                    contact.lastName == newContact.lastName &&
+                    contact.address == newContact.address &&
+                    contact.city == newContact.city &&
+                    contact.state == newContact.state &&
+                    contact.zip == newContact.zip &&
+                    contact.phoneNumber == newContact.phoneNumber &&
+                    contact.email == newContact.email 
+                    ).reduce((acc,val) => acc+1,0)
+        > 0) {
+            console.log('Duplicate Exists');
+        }
+        else {
+            AddressBookArray.push(newContact);
+        }        
+    }
 }    
