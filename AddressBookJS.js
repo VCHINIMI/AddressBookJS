@@ -188,6 +188,13 @@ class AddressBook {
     {
         let givenCity = 'Kakinada';
         let searchPersonInCityOrState = AddressBookArray.filter(contact => contact.firstName == 'Harika' && contact.city == givenCity );
-        console.log(searchPersonInCityOrState.toString());                                    
+        console.log(searchPersonInCityOrState.pop().state);                                    
+    }
+
+    //UC9 View Person By City or State
+    {
+        let givenCity = 'Kakinada';
+        let searchPersonInCityOrState = AddressBookArray.filter(contact => contact.city == givenCity );
+        console.log(searchPersonInCityOrState.toString());
     }
 }    
