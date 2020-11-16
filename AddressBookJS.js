@@ -154,7 +154,12 @@ class AddressBook {
     //UC5 Find contact by name and delete
     {    
         let indexToBeDel = AddressBookArray.indexOf(contact => contact.firstName=='Vinayc')
-        AddressBookArray.splice(indexToBeDel-1,1);
-        console.log(AddressBookArray);
+        //AddressBookArray.splice(indexToBeDel-1,1);
+        //console.log(AddressBookArray);
+    }
+
+    //UC6 Find No of contacts in AddressBook using reduce
+    {
+        console.log('Number of Contacts in Address Book are : ' + AddressBookArray.reduce((acc, val) => acc + 1,0) );
     }
 }    
