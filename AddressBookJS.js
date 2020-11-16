@@ -204,4 +204,12 @@ class AddressBook {
         let countByCity = AddressBookArray.filter(contact => contact.city == givenCity ).reduce((acc,val) => acc+1,0);
         console.log('Count by City ' + givenCity + ' is : ' + countByCity);
     }
+
+    //UC11 Sort by firstName alphabetically
+    {
+        AddressBookArray.sort(function (a, b) {
+            return ('' + a.firstName).localeCompare(b.firstName);
+        });
+        console.log(AddressBookArray);
+    }
 }    
