@@ -133,6 +133,7 @@ class AddressBook {
     }
 }
 
+//UC2
 {
     try{
         let contact = new AddressBook('Vinay', 'Chinimilli', 'Drno', 'Visakhapatnam', 'AndhraPradesh', 533003, 9987654321, 'vc@gmail.com');
@@ -140,4 +141,12 @@ class AddressBook {
     }catch (error) {
         console.error(error);
     }
-}    
+}   
+
+//UC3 AddressBook Array
+{
+    let AddressBookArray = new Array() ;
+    AddressBookArray.push(new AddressBook('Vinay', 'Chinimilli', 'Drno', 'Visakhapatnam', 'AndhraPradesh', 533003, 9987654321, 'vc@gmail.com'));
+    AddressBookArray.push(new AddressBook('Harika', 'Unknown', 'tulasi', 'kakinada', 'AndhraPradesh', 533033, 1234554321, 'hc@gmail.com'));
+    
+}
