@@ -197,4 +197,11 @@ class AddressBook {
         let searchPersonInCityOrState = AddressBookArray.filter(contact => contact.city == givenCity );
         console.log(searchPersonInCityOrState.toString());
     }
+
+    //UC10 Count By City Or State
+    {
+        let givenCity = 'Kakinada';
+        let countByCity = AddressBookArray.filter(contact => contact.city == givenCity ).reduce((acc,val) => acc+1,0);
+        console.log('Count by City ' + givenCity + ' is : ' + countByCity);
+    }
 }    
